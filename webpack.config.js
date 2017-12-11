@@ -9,7 +9,7 @@ const css = require('./webpack/css');
 const webpack = require('webpack');
 //const uglifyJS = require('uglify-js');
 const lintJS = require('./webpack/js.lint');
-//const lintCSS = require('./webpack/sass.lint');
+//https://loftschool.com/uploads/materials/1188_web7.pdfconst lintCSS = require('./webpack/sass.lint');
 const images = require('./webpack/images');
 const PATHS = {
   source: path.join(__dirname, 'source'),
