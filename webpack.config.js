@@ -7,9 +7,9 @@ const sass = require('./webpack/sass');
 const extractCSS = require('./webpack/css.extract');
 const css = require('./webpack/css');
 const webpack = require('webpack');
-//const uglifyJS = require('uglify-js');
 const lintJS = require('./webpack/js.lint');
-//https://loftschool.com/uploads/materials/1188_web7.pdfconst lintCSS = require('./webpack/sass.lint');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const lintCSS = require('./webpack/sass.lint');
 const images = require('./webpack/images');
 const PATHS = {
   source: path.join(__dirname, 'source'),
@@ -44,12 +44,13 @@ const common = merge([
         $: 'jquery',
         jQuery: 'jquery',
       }),
+      new UglifyJsPlugin(),
     ],
   },
   pug(),
   lintJS({ paths: PATHS.sources }),
   //uglifyJS({ useSourceMap: true }),
-  //lintCSS(),
+  lintCSS(),
   images()
 ]);
 module.exports = function(env) {
@@ -64,7 +65,7 @@ module.exports = function(env) {
       common,
       devserver(),
       sass(),
-      css(),
+      css()
     ]);
   }
 };

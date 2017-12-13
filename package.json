@@ -12,7 +12,7 @@
   "description": "This is portfolio page of Artem Klimin ",
   "repository": "https://github.com/artemklimin/my-portfolio.git",
   "scripts": {
-    "start": "webpack-dev-server --env development",
+    "start": "webpack --env production && webpack-dev-server --env development",
     "build": "webpack --env production",
     "serv": "static build",
     "test:lint": "eslint . --cache"
@@ -31,8 +31,10 @@
     "pug-loader": "^2.3.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
+    "stylelint": "^8.3.1",
     "stylelint-webpack-plugin": "^0.9.0",
     "uglifyjs": "^2.4.11",
+    "uglifyjs-webpack-plugin": "^1.1.2",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7",
     "webpack-merge": "^4.1.1",
