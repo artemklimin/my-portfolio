@@ -1,0 +1,5 @@
+mixin mainMenu(menuLinks,activeLinkName)
+    ul.mainMenuList
+        each val in menuLinks
+            li.mainMenuList__item
+                a(href=val.link class=`mainMenuList__link ${val.name == activeLinkName ? 'active' : ''}`)= val.name

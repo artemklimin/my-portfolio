@@ -1,6 +1,29 @@
 extends ../base
 block title
-    | Index page
+    | Климин Артем Владимирович - портфолио
 block main
-    h1 page index-pug222
-    img(src=require("./webpack.svg") width="100")
+    block main-bg
+        .main-bg
+    block page-content
+        .page-content
+            .autorize
+                a.autorize__link(href="#") Авторизоваться
+            .center-block
+                .center-block__ava
+                    img(src=require("../../images/welcome-bg.jpg") width="100")
+                .center-block__ava-title
+                    h1 Артем Климин
+                .center-block__ava-subtitle
+                    h2 Личный сайт веб разработчика
+                .cocial
+                    include ../mixins
+                    -
+                        var menuLinks = [
+                            {link:'/',name:'Главная'},
+                            {link:'/2',name:'Главная2'},
+                            {link:'/3',name:'Главная3'},
+                            {link:'/4',name:'Главная4'}
+                        ]
+                    +mainMenu(menuLinks,'Главная3')
+                .center-block__menu
+            .footer

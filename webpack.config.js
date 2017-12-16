@@ -1,17 +1,18 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const merge = require('webpack-merge');
-const pug = require('./webpack/pug');
-const devserver = require('./webpack/devserver');
-const sass = require('./webpack/sass');
-const extractCSS = require('./webpack/css.extract');
-const css = require('./webpack/css');
-const webpack = require('webpack');
-const lintJS = require('./webpack/js.lint');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const lintCSS = require('./webpack/sass.lint');
-const images = require('./webpack/images');
-const PATHS = {
+const path = require('path'),
+webpack = require('webpack'),
+HtmlWebpackPlugin = require('html-webpack-plugin'),
+merge = require('webpack-merge'),
+pug = require('./webpack/pug'),
+devserver = require('./webpack/devserver'),
+sass = require('./webpack/sass'),
+extractCSS = require('./webpack/css.extract'),
+css = require('./webpack/css'),
+fonts = require('./webpack/fonts'),
+lintJS = require('./webpack/js.lint'),
+UglifyJsPlugin = require('uglifyjs-webpack-plugin'),
+lintCSS = require('./webpack/sass.lint'),
+images = require('./webpack/images'),
+PATHS = {
   source: path.join(__dirname, 'source'),
   build: path.join(__dirname, 'build'),
 };
@@ -44,15 +45,18 @@ const common = merge([
         $: 'jquery',
         jQuery: 'jquery',
       }),
-      new UglifyJsPlugin(),
+      new UglifyJsPlugin({
+        sourceMap: true
+      }),
     ],
   },
   pug(),
   lintJS({ paths: PATHS.sources }),
-  //uglifyJS({ useSourceMap: true }),
   lintCSS(),
+  fonts(),
   images()
 ]);
+console.log(fonts);
 module.exports = function(env) {
   if (env === 'production') {
     return merge([
