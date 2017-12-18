@@ -2,12 +2,36 @@ extends ../template
 
 block variables
     - var title= 'Добро пожаловать'
-
+block bg
+    .bg
 block content
-    h1 Главная
-    form
-        label(for="email") email
-        input(name="email" id="email")
-        label(for="password") password
-        input(name="password" id="password")
-        nutton Войти
+    .autorize-button
+        a.autorize-button__link(href="#") Авторизация
+    .welcome
+        .frame
+            .frame__ava
+                img.frame__ava-img(src="assets/images/ava.jpg" alt="Аватар" title="Климин Артем")
+            h1.frame__name Климин Артем
+            h2.frame__subName Личный сайт веб разработчика
+            .frame__social
+                ul.frame__social-list
+                    li.frame__social-item.frame__social-item--vk
+                        a.frame__social-item-link(href="https://vk.com" target="_blank")
+                            svg.icon
+                                use(xlink:href="assets/images/sprites.svg#vk")
+                    li.frame__social-item.frame__social-item--fb
+                        a.frame__social-item-link(href="https://facebook.com" target="_blank")
+                            svg.icon
+                                use(xlink:href="assets/images/sprites.svg#fb")
+                    li.frame__social-item.frame__social-item--ok
+                        a.frame__social-item-link(href="https://odnoklassniki.ru" target="_blank")
+                            svg.icon
+                                use(xlink:href="assets/images/sprites.svg#ok")
+            form.autorize
+                label(for="email") email
+                input(name="email" id="email")
+                label(for="password") password
+                input(name="password" id="password")
+                nutton Войти
+        include ../common/menu.pug
+    .footer-copy © Артем Климин | создано с любовью в LoftSchool | 2017-2018

@@ -11,20 +11,43 @@
     <script src="/assets/scripts/boundle.js" defer></script>
   </head>
   <body>
-    <h1>Главная</h1>
-    <form>
-      <label for="email">email</label>
-      <input name="email" id="email">
-      <label for="password">password</label>
-      <input name="password" id="password">
-      <nutton>Войти</nutton>
-    </form>
-    <h2>Меню</h2>
-    <ul class="menu">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="about.html">Обо мне</a></li>
-      <li><a href="my-works.html">Мои работы</a></li>
-      <li><a href="blog.html">Блог</a></li>
-    </ul>
+    <div class="bg"></div>
+    <div class="autorize-button"><a class="autorize-button__link" href="#">Авторизация</a></div>
+    <div class="welcome">
+      <div class="frame">
+        <div class="frame__ava"><img class="frame__ava-img" src="assets/images/ava.jpg" alt="Аватар" title="Климин Артем"></div>
+        <h1 class="frame__name">Климин Артем</h1>
+        <h2 class="frame__subName">Личный сайт веб разработчика</h2>
+        <div class="frame__social">
+          <ul class="frame__social-list">
+            <li class="frame__social-item frame__social-item--vk"><a class="frame__social-item-link" href="https://vk.com" target="_blank">
+                <svg class="icon">
+                  <use xlink:href="assets/images/sprites.svg#vk"></use>
+                </svg></a></li>
+            <li class="frame__social-item frame__social-item--fb"><a class="frame__social-item-link" href="https://facebook.com" target="_blank">
+                <svg class="icon">
+                  <use xlink:href="assets/images/sprites.svg#fb"></use>
+                </svg></a></li>
+            <li class="frame__social-item frame__social-item--ok"><a class="frame__social-item-link" href="https://odnoklassniki.ru" target="_blank">
+                <svg class="icon">
+                  <use xlink:href="assets/images/sprites.svg#ok"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+        <form class="autorize">
+          <label for="email">email</label>
+          <input name="email" id="email">
+          <label for="password">password</label>
+          <input name="password" id="password">
+          <nutton>Войти</nutton>
+        </form>
+      </div>
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__item-link" href="my-works.html">Мои работы</a></li>
+        <li class="menu__item"><a class="menu__item-link" href="about.html">Обо мне</a></li>
+        <li class="menu__item"><a class="menu__item-link" href="blog.html">Блог</a></li>
+      </ul>
+    </div>
+    <div class="footer-copy">© Артем Климин | создано с любовью в LoftSchool | 2017-2018</div>
   </body>
 </html>

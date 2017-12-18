@@ -1,9 +1,19 @@
-body{
-    margin: 10px;
+body {
+    margin: 0;
+    padding: 0;
     background: #fff;
 }
+
+ul,
+li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+@import 'common/fonts';
 @import 'common/for-all';
 @import 'common/welcome';
 @import 'common/menu';
 @import 'common/technologies';
-@import 'common/slider'; 
+@import 'common/slider';
