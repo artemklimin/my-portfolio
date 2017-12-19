@@ -3,7 +3,7 @@ extends ../template
 block variables
     - var title= 'Добро пожаловать'
 block bg
-    .bg
+    .bg-welcome
 block content
     .autorize-button
         a.autorize-button__link(href="#") Авторизация
@@ -16,17 +16,17 @@ block content
             .frame__social
                 ul.frame__social-list
                     li.frame__social-item.frame__social-item--vk
-                        a.frame__social-item-link(href="https://vk.com" target="_blank")
+                        a.frame__social-item-link(href="https://vk.com/id7522490" target="_blank")
                             svg.icon
                                 use(xlink:href="assets/images/sprites.svg#vk")
-                    li.frame__social-item.frame__social-item--fb
-                        a.frame__social-item-link(href="https://facebook.com" target="_blank")
+                    li.frame__social-item.frame__social-item--gh
+                        a.frame__social-item-link(href="https://github.com/artemklimin" target="_blank")
                             svg.icon
-                                use(xlink:href="assets/images/sprites.svg#fb")
-                    li.frame__social-item.frame__social-item--ok
-                        a.frame__social-item-link(href="https://odnoklassniki.ru" target="_blank")
+                                use(xlink:href="assets/images/sprites.svg#gh")
+                    li.frame__social-item.frame__social-item--sl
+                        a.frame__social-item-link(href="https://webdev092017.slack.com/messages/D7MMCN5EC/details/" target="_blank")
                             svg.icon
-                                use(xlink:href="assets/images/sprites.svg#ok")
+                                use(xlink:href="assets/images/sprites.svg#sl")
             form.autorize
                 label(for="email") email
                 input(name="email" id="email")

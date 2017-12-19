@@ -2,7 +2,14 @@ extends ../template
 
 block variables
     - var title = 'Обо мне'
-
+block bg
+    .bg-about
 block content
+    .humburger
+        a.humburger-link(href="#")
+            .humburger-lines
     h1 Обо мне
     include ../common/technologies.pug
+    .full-screen-menu
+        include ../common/menu.pug
+    
