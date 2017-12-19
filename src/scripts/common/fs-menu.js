@@ -1,9 +1,10 @@
-const getBurger = document.querySelector(".humburger-link");
-const menu = document.querySelector(".full-screen-menu");
-        
-getBurger.addEventListener("click", burger());
+//const getBurger = document.querySelector(".humburger-link");
+//const menu = document.querySelector(".full-screen-menu");
+
+document.querySelector(".humburger-link").addEventListener("click", burger);
 
 function burger() {
-    getBurger.classList.toggle("humburger-link--active");
-    menu.classList.toggle("full-screen-menu--active");
+    console.log('eee');
+    document.querySelector(".humburger-link").classList.toggle("humburger-link--active");
+    document.querySelector(".full-screen-menu").classList.toggle("full-screen-menu--active");
 }
