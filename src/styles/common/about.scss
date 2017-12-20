@@ -1,13 +1,38 @@
-.bg-about {
+.hero {
+    height: 620px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    background: url(../images/about-bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+.frame--about {
+    width: initial;
+    background: transparent;
+    height: min-content;
+    .frame__name {
+        color: #fff;
+    }
+    .frame__subName {
+        color: rgba(255, 255, 255, .8);
+    }
+}
+
+.about-container {
+    background: linear-gradient(to right, #efeee9 0%, #efeee9 50%, #efebe0 50%, #efebe0 100%);
+    display: block;
+    position: relative;
+}
+
+.treugolnik {
     position: absolute;
     width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
     left: 0;
-    z-index: -50;
-    background: url(../images/about-bg.jpg) no-repeat;
-    background-size: contain;
+    bottom: -10px;
 }
 
 .humburger {
@@ -67,4 +92,19 @@
         transform: rotate(-135deg);
         top: 0;
     }
+}
+
+.treugolnik__left,
+.treugolnik__right {
+    width: 50%;
+    height: 150px;
+}
+
+.treugolnik__left {
+    float: left;
+    fill: #efeee9;
+}
+
+.treugolnik__right {
+    fill: #eeebdf;
 }

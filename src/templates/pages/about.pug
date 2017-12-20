@@ -3,8 +3,19 @@ extends ../template
 block variables
     - var title = 'Обо мне'
 block bg
-    .bg-about
 block content
+    .hero
+        .frame.frame--about
+            .frame__ava
+                img.frame__ava-img(src="assets/images/ava.jpg" alt="Аватар" title="Климин Артем")
+            h1.frame__name Климин Артем
+            h2.frame__subName Личный сайт веб разработчика
+        .treugolnik
+            svg.treugolnik__left
+                use(xlink:href="assets/images/sprites.svg#treugolnik1")
+            svg.treugolnik__right
+                use(xlink:href="assets/images/sprites.svg#treugolnik2")
+    .about-container asasas<br>asasas<br>asasas<br>asasas<br>asasas<br>
     .humburger
         a.humburger-link(href="#")
             .humburger-lines
