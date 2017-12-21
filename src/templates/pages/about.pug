@@ -19,15 +19,18 @@ block content
                 use(xlink:href="assets/images/sprites.svg#arrow-down")
     .about-container 
         .about-left
-            .about-left__title Обо мне
+            .about-left__title
+                span.about-left__title-lines Обо мне
             .about-left__info
                 .about-left__my-photo-container
                     img.about-left__img(src="", alt="")
-                .about-left__who-i-am Кто я
-                .about-left__text <p>Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p> <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!</p>
+                .about-left__who-i-am 
+                    span.about-left__who-i-am-lines Кто я
+                .about-left__text <p>Я веб разработчик из Новосибирска. Мне 27 лет.<br>Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p> <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!</p>
         .about-right
-            .about-right__title Чем я могу быть Вам полезен
-            .about-right__intro Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
+            .about-right__title
+                span.about-right__title-lines Чем я могу быть<br>Вам полезен
+            .about-right__intro Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
             .about-right__exp
                 ul.exp-lines
                     li.exp-lines__each
@@ -35,12 +38,15 @@ block content
                         ul.exp-item 
                             li.exp-item__cercle
                                 .exp-item__name HTML5
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
                             li.exp-item__cercle
                                 .exp-item__name CSS3
                             li.exp-item__cercle
                                 .exp-item__name JavaScript & jQuery
                     li.exp-lines__each
-                        .exp-lines__title Frontend
+                        .exp-lines__title Backend
                         ul.exp-item 
                             li.exp-item__cercle
                                 .exp-item__name PHP
@@ -51,7 +57,7 @@ block content
                             li.exp-item__cercle
                                 .exp-item__name Mongo.db
                     li.exp-lines__each
-                        .exp-lines__title Frontend
+                        .exp-lines__title Workflow
                         ul.exp-item 
                             li.exp-item__cercle
                                 .exp-item__name Git

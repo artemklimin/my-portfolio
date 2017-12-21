@@ -8,7 +8,7 @@
     flex-direction: column;
     background: url(../images/about-bg.jpg) no-repeat;
     background-size: cover;
-    &:before{
+    &:before {
         background: url(../images/portfolio.png) no-repeat center 40%;
         content: "";
         position: absolute;
@@ -121,29 +121,180 @@
 .treugolnik__right {
     fill: #eeebdf;
 }
-.arrow-scroll-down{
+
+.arrow-scroll-down {
     display: block;
     position: absolute;
     z-index: 10;
     width: 26px;
     bottom: 70px;
-    fill: rgba(255,255,255,0.7);
+    fill: rgba(255, 255, 255, 0.7);
     left: 50%;
     margin-left: -13px;
     height: 26px;
 }
-.about-container{
+
+.about-container {
     display: flex;
     width: 100%;
     justify-content: center;
 }
-.about-left, .about-right{
+
+.about-left,
+.about-right {
     width: 50%;
     max-width: 900px;
 }
-.about-left{
+
+.about-left {
     background: #efeee9;
 }
-.about-right{
+
+.about-right {
     background: #eeebdf;
+}
+
+.about-left {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-left__title {
+    font-family: "BERNIERRegular-Regular";
+    font-size: 63px;
+    color: #373e42;
+    width: 45%;
+    text-align: center;
+    position: relative;
+    &:before {
+        background: url(../images/about.png) center top no-repeat;
+        opacity: 0.07;
+        position: absolute;
+        z-index: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: -40px;
+    }
+}
+
+.about-left__info {
+    width: 55%;
+}
+
+.about-left__title-lines {
+    position: relative;
+    display: inline-block;
+    &:before {
+        width: 24px;
+        height: 5px;
+        background: rgba(55, 62, 66, .2);
+        content: "";
+        position: absolute;
+        top: 35px;
+        left: -45px;
+    }
+    &:after {
+        width: 24px;
+        height: 5px;
+        background: rgba(55, 62, 66, .2);
+        content: "";
+        position: absolute;
+        top: 35px;
+        right: -45px;
+    }
+}
+
+.about-left__who-i-am,
+.about-right__title {
+    font-family: "BERNIERRegular-Regular";
+    font-size: 35px;
+    color: #455a64;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.about-left__who-i-am-lines {
+    position: relative;
+    display: inline-block;
+    &:before {
+        width: 24px;
+        height: 5px;
+        background: rgba(55, 62, 66, .2);
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: -50px;
+    }
+    &:after {
+        width: 24px;
+        height: 5px;
+        background: rgba(55, 62, 66, .2);
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: -50px;
+    }
+}
+
+.about-left__text,
+.about-right__intro {
+    font-size: 16px;
+    font-family: "RobotoRegular";
+    color: #455a64;
+    line-height: 24px;
+    padding: 0 38px;
+}
+
+.about-right__title-lines {
+    position: relative;
+    display: inline-block;
+    &:before {
+        width: 24px;
+        height: 5px;
+        background: rgba(55, 62, 66, .2);
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: -50px;
+    }
+    &:after {
+        width: 24px;
+        height: 5px;
+        background: rgba(55, 62, 66, .2);
+        content: "";
+        position: absolute;
+        top: 15px;
+        right: -50px;
+    }
+}
+
+.about-right__intro {
+    padding: 35px 38px 12px;
+}
+
+.exp-lines__title {
+    font-size: 28px;
+    font-family: "RobotoMedium";
+    color: #455a64;
+    padding: 30px 38px 15px;
+}
+
+circle.circle-bg {
+    fill: transparent;
+    stroke: #dfdcd5;
+    stroke-width: 20;
+    stroke-dasharray: 360 360;
+}
+
+circle {
+    fill: rgba(156, 205, 50, 0);
+    stroke: #16c2aa;
+    stroke-width: 20;
+    stroke-dasharray: 158 360;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
