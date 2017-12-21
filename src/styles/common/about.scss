@@ -8,14 +8,27 @@
     flex-direction: column;
     background: url(../images/about-bg.jpg) no-repeat;
     background-size: cover;
+    &:before{
+        background: url(../images/portfolio.png) no-repeat center 40%;
+        content: "";
+        position: absolute;
+        background-size: 70%;
+        width: 100%;
+        height: 100%;
+        opacity: 0.06;
+        z-index: 1;
+    }
 }
 
 .frame--about {
     width: initial;
     background: transparent;
     height: min-content;
+    padding: 40px 10px 90px;
+    z-index: 3;
     .frame__name {
         color: #fff;
+        margin-top: 25px;
     }
     .frame__subName {
         color: rgba(255, 255, 255, .8);
@@ -107,4 +120,30 @@
 
 .treugolnik__right {
     fill: #eeebdf;
+}
+.arrow-scroll-down{
+    display: block;
+    position: absolute;
+    z-index: 10;
+    width: 26px;
+    bottom: 70px;
+    fill: rgba(255,255,255,0.7);
+    left: 50%;
+    margin-left: -13px;
+    height: 26px;
+}
+.about-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.about-left, .about-right{
+    width: 50%;
+    max-width: 900px;
+}
+.about-left{
+    background: #efeee9;
+}
+.about-right{
+    background: #eeebdf;
 }

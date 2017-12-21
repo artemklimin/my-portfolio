@@ -15,7 +15,51 @@ block content
                 use(xlink:href="assets/images/sprites.svg#treugolnik1")
             svg.treugolnik__right
                 use(xlink:href="assets/images/sprites.svg#treugolnik2")
-    .about-container asasas<br>asasas<br>asasas<br>asasas<br>asasas<br>
+            svg.arrow-scroll-down
+                use(xlink:href="assets/images/sprites.svg#arrow-down")
+    .about-container 
+        .about-left
+            .about-left__title Обо мне
+            .about-left__info
+                .about-left__my-photo-container
+                    img.about-left__img(src="", alt="")
+                .about-left__who-i-am Кто я
+                .about-left__text <p>Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p> <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!</p>
+        .about-right
+            .about-right__title Чем я могу быть Вам полезен
+            .about-right__intro Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
+            .about-right__exp
+                ul.exp-lines
+                    li.exp-lines__each
+                        .exp-lines__title Frontend
+                        ul.exp-item 
+                            li.exp-item__cercle
+                                .exp-item__name HTML5
+                            li.exp-item__cercle
+                                .exp-item__name CSS3
+                            li.exp-item__cercle
+                                .exp-item__name JavaScript & jQuery
+                    li.exp-lines__each
+                        .exp-lines__title Frontend
+                        ul.exp-item 
+                            li.exp-item__cercle
+                                .exp-item__name PHP
+                            li.exp-item__cercle
+                                .exp-item__name mySQL
+                            li.exp-item__cercle
+                                .exp-item__name Node.js & npm
+                            li.exp-item__cercle
+                                .exp-item__name Mongo.db
+                    li.exp-lines__each
+                        .exp-lines__title Frontend
+                        ul.exp-item 
+                            li.exp-item__cercle
+                                .exp-item__name Git
+                            li.exp-item__cercle
+                                .exp-item__name Gulp
+                            li.exp-item__cercle
+                                .exp-item__name Bower
+
     .humburger
         a.humburger-link(href="#")
             .humburger-lines
