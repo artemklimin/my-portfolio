@@ -6,10 +6,10 @@
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    background: url(../images/about-bg.jpg) no-repeat;
+    background: url(../../images/about-bg.jpg) no-repeat;
     background-size: cover;
     &:before {
-        background: url(../images/portfolio.png) no-repeat center 40%;
+        background: url(../../images/portfolio.png) no-repeat center 40%;
         content: "";
         position: absolute;
         background-size: 70%;
@@ -33,12 +33,6 @@
     .frame__subName {
         color: rgba(255, 255, 255, .8);
     }
-}
-
-.about-container {
-    background: linear-gradient(to right, #efeee9 0%, #efeee9 50%, #efebe0 50%, #efebe0 100%);
-    display: block;
-    position: relative;
 }
 
 .treugolnik {
@@ -115,11 +109,11 @@
 
 .treugolnik__left {
     float: left;
-    fill: #efeee9;
+    fill: #faf8f0;
 }
 
 .treugolnik__right {
-    fill: #eeebdf;
+    fill: #faf8f0;
 }
 
 .arrow-scroll-down {
@@ -134,7 +128,16 @@
     height: 26px;
 }
 
-.about-container {
+.my-works-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    background: #faf8f0;
+    flex-direction: column;
+}
+.about-container{
+    position: relative;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -144,6 +147,7 @@
 .about-right {
     width: 50%;
     max-width: 900px;
+    justify-content: center;
 }
 
 .about-left {
@@ -157,17 +161,18 @@
 .about-left {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
-.about-left__title {
+.my-works__title {
     font-family: "BERNIERRegular-Regular";
     font-size: 63px;
     color: #373e42;
-    width: 45%;
+    width: 100%;
     text-align: center;
     position: relative;
     &:before {
-        background: url(../images/about.png) center top no-repeat;
+        background: url(../../images/works_header.svg) center top no-repeat;
         opacity: 0.07;
         position: absolute;
         z-index: 0;
@@ -181,9 +186,12 @@
 
 .about-left__info {
     width: 55%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
 }
 
-.about-left__title-lines {
+.my-works__title-lines {
     position: relative;
     display: inline-block;
     &:before {
@@ -454,3 +462,63 @@ align-items: center;
     fill: rgba(255,255,255,1);
     margin-left: 10px;
 }
+.about-left__teaser{
+    margin: 35px auto 40px;
+    line-height: 52px;
+    color: #20b5a1;
+    border-top: 1px solid #20b5a1;
+    border-bottom: 1px solid #20b5a1;
+    text-align: center;
+    width: 420px;
+    max-width: 90%;
+}
+.about-left__button{
+    padding: 15px;
+    background: #00bfa5;
+    border-radius: 5px;
+    display: inline-block;
+    font-family: "RobotoMedium";
+    color: #fff;
+    font-size: 16px;
+    width: fit-content;
+    margin: 0 auto;
+    text-decoration: none;
+}
+.link-icon{
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    margin-right: 10px;
+    margin-bottom: -5px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .left2x2{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background: #f0efe9;
+  }
+  .right2x1{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background: #efebe0;
+  }
+  .right1x1{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .right1x1-2{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
