@@ -37,40 +37,131 @@ block content
                         .exp-lines__title Frontend
                         ul.exp-item 
                             li.exp-item__cercle
-                                .exp-item__name HTML5
+                                .exp-item__name 
+                                    .exp-item__name-inner HTML5
                                     svg(width="120" height="120")
                                         <circle r="50" cx="60" cy="60" class="circle-bg" />
                                         <circle r="50" cx="60" cy="60" />
                             li.exp-item__cercle
-                                .exp-item__name CSS3
+                                .exp-item__name 
+                                    .exp-item__name-inner CSS3
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
                             li.exp-item__cercle
-                                .exp-item__name JavaScript & jQuery
+                                .exp-item__name 
+                                    .exp-item__name-inner JavaScript<br>& jQuery
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
                     li.exp-lines__each
                         .exp-lines__title Backend
                         ul.exp-item 
                             li.exp-item__cercle
-                                .exp-item__name PHP
+                                .exp-item__name 
+                                    .exp-item__name-inner PHP
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
                             li.exp-item__cercle
-                                .exp-item__name mySQL
+                                .exp-item__name 
+                                    .exp-item__name-inner mySQL
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
                             li.exp-item__cercle
-                                .exp-item__name Node.js & npm
+                                .exp-item__name 
+                                    .exp-item__name-inner Node.js<br>& npm
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
                             li.exp-item__cercle
-                                .exp-item__name Mongo.db
+                                .exp-item__name 
+                                    .exp-item__name-inner Mongo.db
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
                     li.exp-lines__each
                         .exp-lines__title Workflow
                         ul.exp-item 
                             li.exp-item__cercle
-                                .exp-item__name Git
+                                .exp-item__name 
+                                    .exp-item__name-inner Git
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
                             li.exp-item__cercle
-                                .exp-item__name Gulp
+                                .exp-item__name 
+                                    .exp-item__name-inner Gulp
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
                             li.exp-item__cercle
-                                .exp-item__name Bower
+                                .exp-item__name 
+                                    .exp-item__name-inner Bower
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
+    .footer-container
+        .footer-container__map(id="map")
 
+        .footer-container__contacts
+            .footer-container__contacts-frame
+                .footer-container__contacts-title
+                    .footer-container__contacts-title-lines Контакты
+                ul.footer-container__contacts-list
+                    li.footer-container__contacts-item
+                        .footer-container__contacts-item-link
+                            .footer-container__contacts-item-icon
+                            a.footer-container__contacts-item-link(href="#")
+                                svg.footer-container__contacts-item-icon.vk
+                                    use(xlink:href="assets/images/sprites.svg#skype")
+                                span.footer-container__contacts-item-text yasait.ru
+                    li.footer-container__contacts-item
+                        .footer-container__contacts-item-link
+                            .footer-container__contacts-item-icon
+                            a.footer-container__contacts-item-link(href="#")
+                                svg.footer-container__contacts-item-icon.vk
+                                    use(xlink:href="assets/images/sprites.svg#mail")
+                                span.footer-container__contacts-item-text avklimin@yandex.ru
+                    li.footer-container__contacts-item
+                        .footer-container__contacts-item-link
+                            .footer-container__contacts-item-icon
+                            a.footer-container__contacts-item-link(href="#")
+                                svg.footer-container__contacts-item-icon.vk
+                                    use(xlink:href="assets/images/sprites.svg#phone")
+                                span.footer-container__contacts-item-text +7 921 882 36 17
+                    li.footer-container__contacts-item
+                        .footer-container__contacts-item-link
+                            .footer-container__contacts-item-icon
+                            a.footer-container__contacts-item-link(href="#")
+                                svg.footer-container__contacts-item-icon.vk
+                                    use(xlink:href="assets/images/sprites.svg#map-marker")
+                                span.footer-container__contacts-item-text г. СПб, ул. Прибрежная д. 4
+        .footer-container__bottom-line
+            .footer-container__bottom-line-1
+                include ../common/footer-menu.pug
+                ul.footer-container__bottom-line-social
+                    li.footer-container__bottom-line-social-item
+                        a.footer-container__bottom-line-social-item-link(href="#")
+                            svg.footer-icon.vk
+                                use(xlink:href="assets/images/sprites.svg#vk")
+                    li.footer-container__bottom-line-social-item
+                        a.footer-container__bottom-line-social-item-link(href="#")
+                            svg.footer-icon.gh
+                                use(xlink:href="assets/images/sprites.svg#gh")
+                    li.footer-container__bottom-line-social-item
+                        a.footer-container__bottom-line-social-item-link(href="#")
+                            svg.footer-icon.sl
+                                use(xlink:href="assets/images/sprites.svg#sl")
+            .footer-container__bottom-line-2
+                .footer-container__bottom-line-tiser Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках<br>обучения в Школе онлайн образования LoftSchool. 
+                .footer-container__bottom-line-copyright © Владимир Астахов | создано с любовью в LoftSchool | 2016
     .humburger
         a.humburger-link(href="#")
             .humburger-lines
-    h1 Обо мне
-    include ../common/technologies.pug
+    //h1 Обо мне
+    //include ../common/technologies.pug
     .full-screen-menu
-        include ../common/menu.pug
+        include ../common/footer-menu.pug
     

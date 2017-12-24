@@ -2,7 +2,167 @@ extends ../template
 
 block variables
     - var title = 'Мои работы'
-
+block bg
 block content
-    h1 Мои работы
+    .hero
+        .frame.frame--about
+            .frame__ava
+                img.frame__ava-img(src="assets/images/ava.jpg" alt="Аватар" title="Климин Артем")
+            h1.frame__name Климин Артем
+            h2.frame__subName Личный сайт веб разработчика
+        .treugolnik
+            svg.treugolnik__left
+                use(xlink:href="assets/images/sprites.svg#treugolnik1")
+            svg.treugolnik__right
+                use(xlink:href="assets/images/sprites.svg#treugolnik2")
+            svg.arrow-scroll-down
+                use(xlink:href="assets/images/sprites.svg#arrow-down")
+    .about-container 
+        .about-left
+            .about-left__title
+                span.about-left__title-lines Обо мне
+            .about-left__info
+                .about-left__my-photo-container
+                    img.about-left__img(src="", alt="")
+                .about-left__who-i-am 
+                    span.about-left__who-i-am-lines Кто я
+                .about-left__text <p>Я веб разработчик из Новосибирска. Мне 27 лет.<br>Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p> <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!</p>
+        .about-right
+            .about-right__title
+                span.about-right__title-lines Чем я могу быть<br>Вам полезен
+            .about-right__intro Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+            .about-right__exp
+                ul.exp-lines
+                    li.exp-lines__each
+                        .exp-lines__title Frontend
+                        ul.exp-item 
+                            li.exp-item__cercle
+                                .exp-item__name 
+                                    .exp-item__name-inner HTML5
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
+                            li.exp-item__cercle
+                                .exp-item__name 
+                                    .exp-item__name-inner CSS3
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
+                            li.exp-item__cercle
+                                .exp-item__name 
+                                    .exp-item__name-inner JavaScript<br>& jQuery
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
+                    li.exp-lines__each
+                        .exp-lines__title Backend
+                        ul.exp-item 
+                            li.exp-item__cercle
+                                .exp-item__name 
+                                    .exp-item__name-inner PHP
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
+                            li.exp-item__cercle
+                                .exp-item__name 
+                                    .exp-item__name-inner mySQL
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
+                            li.exp-item__cercle
+                                .exp-item__name 
+                                    .exp-item__name-inner Node.js<br>& npm
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
+                            li.exp-item__cercle
+                                .exp-item__name 
+                                    .exp-item__name-inner Mongo.db
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
+                    li.exp-lines__each
+                        .exp-lines__title Workflow
+                        ul.exp-item 
+                            li.exp-item__cercle
+                                .exp-item__name 
+                                    .exp-item__name-inner Git
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
+                            li.exp-item__cercle
+                                .exp-item__name 
+                                    .exp-item__name-inner Gulp
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
+                            li.exp-item__cercle
+                                .exp-item__name 
+                                    .exp-item__name-inner Bower
+                                    svg(width="120" height="120")
+                                        <circle r="50" cx="60" cy="60" class="circle-bg" />
+                                        <circle r="50" cx="60" cy="60" />
+    .footer-container
+        .footer-container__map(id="map")
+
+        .footer-container__contacts
+            .footer-container__contacts-frame
+                .footer-container__contacts-title
+                    .footer-container__contacts-title-lines Контакты
+                ul.footer-container__contacts-list
+                    li.footer-container__contacts-item
+                        .footer-container__contacts-item-link
+                            .footer-container__contacts-item-icon
+                            a.footer-container__contacts-item-link(href="#")
+                                svg.footer-container__contacts-item-icon.vk
+                                    use(xlink:href="assets/images/sprites.svg#skype")
+                                span.footer-container__contacts-item-text yasait.ru
+                    li.footer-container__contacts-item
+                        .footer-container__contacts-item-link
+                            .footer-container__contacts-item-icon
+                            a.footer-container__contacts-item-link(href="#")
+                                svg.footer-container__contacts-item-icon.vk
+                                    use(xlink:href="assets/images/sprites.svg#mail")
+                                span.footer-container__contacts-item-text avklimin@yandex.ru
+                    li.footer-container__contacts-item
+                        .footer-container__contacts-item-link
+                            .footer-container__contacts-item-icon
+                            a.footer-container__contacts-item-link(href="#")
+                                svg.footer-container__contacts-item-icon.vk
+                                    use(xlink:href="assets/images/sprites.svg#phone")
+                                span.footer-container__contacts-item-text +7 921 882 36 17
+                    li.footer-container__contacts-item
+                        .footer-container__contacts-item-link
+                            .footer-container__contacts-item-icon
+                            a.footer-container__contacts-item-link(href="#")
+                                svg.footer-container__contacts-item-icon.vk
+                                    use(xlink:href="assets/images/sprites.svg#map-marker")
+                                span.footer-container__contacts-item-text г. СПб, ул. Прибрежная д. 4
+        .footer-container__bottom-line
+            .footer-container__bottom-line-1
+                include ../common/footer-menu.pug
+                ul.footer-container__bottom-line-social
+                    li.footer-container__bottom-line-social-item
+                        a.footer-container__bottom-line-social-item-link(href="#")
+                            svg.footer-icon.vk
+                                use(xlink:href="assets/images/sprites.svg#vk")
+                    li.footer-container__bottom-line-social-item
+                        a.footer-container__bottom-line-social-item-link(href="#")
+                            svg.footer-icon.gh
+                                use(xlink:href="assets/images/sprites.svg#gh")
+                    li.footer-container__bottom-line-social-item
+                        a.footer-container__bottom-line-social-item-link(href="#")
+                            svg.footer-icon.sl
+                                use(xlink:href="assets/images/sprites.svg#sl")
+            .footer-container__bottom-line-2
+                .footer-container__bottom-line-tiser Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках<br>обучения в Школе онлайн образования LoftSchool. 
+                .footer-container__bottom-line-copyright © Владимир Астахов | создано с любовью в LoftSchool | 2016
+    .humburger
+        a.humburger-link(href="#")
+            .humburger-lines
+    //h1 Обо мне
+    //include ../common/technologies.pug
+    .full-screen-menu
+        include ../common/footer-menu.pug
+    
     include ../common/slider.pug

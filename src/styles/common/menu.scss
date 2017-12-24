@@ -4,3 +4,54 @@
         list-style: none;
     }
 }
+
+.full-screen-menu{
+    width: 100%;
+    height: 100%;
+    right: -100%;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    background: rgba(0,191,165,.87);
+    transition: all .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 60px;
+    .footer-container__bottom-line-menu{
+        flex-direction: column;
+        justify-content: flex-start;
+        .footer-container__bottom-line-menu-item{
+            .footer-container__bottom-line-menu-item-link{
+                margin-right:0;
+                font-family: "BERNIERRegular-Regular";
+                font-size: 63px;
+                line-height: 136px;
+                position: relative;
+                &:before{
+                    display: block;
+                    position: absolute;
+                    left: -40px;
+                    top: 35px;
+                    width: 20px;
+                    height: 5px;
+                    background: rgba(255,255,255,.2);
+                    content: "";
+                }
+                &:after{
+                    display: block;
+                    position: absolute;
+                    right: -40px;
+                    top: 35px;
+                    width: 20px;
+                    height: 5px;
+                    background: rgba(255,255,255,.2);
+                    content: "";
+                }
+            }
+        }
+    }
+}
+.full-screen-menu--active{
+    right:0;
+}
