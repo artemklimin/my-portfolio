@@ -2,16 +2,69 @@ extends ../template
 
 block variables
     - var title = 'Блог'
-
+block bg
 block content
-    h1 Блог
-    ul
-        li
-            h2 Заголовок статьи
-            P Тут будет идти какой-то контент статьи и теста тут должно быть для примера достаточно много, что бы появились переходы на другие строчки
-        li
-            h2 Заголовок новой статьи
-            P Тут будет идти какой-то контент статьи и теста тут должно быть для примера достаточно много, что бы появились переходы на другие строчки
-        li
-            h2 Заголовок еще одной статьи
-            P Тут будет идти какой-то контент статьи и теста тут должно быть для примера достаточно много, что бы появились переходы на другие строчки
+    .hero.hero--blog
+        .frame.frame--about
+            .frame__ava
+                img.frame__ava-img(src="assets/images/ava.jpg" alt="Аватар" title="Климин Артем")
+            .my-works__title.my-works__title--blog
+                span.my-works__title-lines Блог
+            h2.frame__subName.frame__subName--blog Статьи, которые я написал
+        .treugolnik
+            svg.treugolnik__left.treugolnik__left--blog
+                use(xlink:href="assets/images/sprites.svg#treugolnik1")
+            svg.treugolnik__right.treugolnik__right--blog
+                use(xlink:href="assets/images/sprites.svg#treugolnik2")
+    .blog-container
+        .left-menu
+            ul.left-menu__list
+                li.left-menu__list-item
+                    a.left-menu__list-item-link.active-link(href="#") Статья 1
+                li.left-menu__list-item
+                    a.left-menu__list-item-link(href="#") Статья 2
+                li.left-menu__list-item
+                    a.left-menu__list-item-link(href="#") Статья 3
+                li.left-menu__list-item
+                    a.left-menu__list-item-link(href="#") Статья 4
+        .blog-content
+            ul.blog-content__list
+                li.blog-content__list-item
+                    h2.blog-content__list-item-header Заголовок статьи
+                    .blog-content__list-item-date 12.12.2017
+                    .blog-content__list-item-text Тут будет идти какой-то контент статьи и теста тут должно быть для примера достаточно много, что бы появились переходы на другие строчки
+                li.blog-content__list-item
+                    h2.blog-content__list-item-header Заголовок новой статьи
+                    .blog-content__list-item-date 12.12.2017
+                    .blog-content__list-item-text Тут будет идти какой-то контент статьи и теста тут должно быть для примера достаточно много, что бы появились переходы на другие строчки
+                li.blog-content__list-item
+                    h2.blog-content__list-item-header Заголовок еще одной статьи
+                    .blog-content__list-item-date 12.12.2017
+                    .blog-content__list-item-text Тут будет идти какой-то контент статьи и теста тут должно быть для примера достаточно много, что бы появились переходы на другие строчки
+      
+    .footer-container
+        .footer-container__bottom-line
+            .footer-container__bottom-line-1
+                include ../common/footer-menu.pug
+                ul.footer-container__bottom-line-social
+                    li.footer-container__bottom-line-social-item
+                        a.footer-container__bottom-line-social-item-link(href="#")
+                            svg.footer-icon.vk
+                                use(xlink:href="assets/images/sprites.svg#vk")
+                    li.footer-container__bottom-line-social-item
+                        a.footer-container__bottom-line-social-item-link(href="#")
+                            svg.footer-icon.gh
+                                use(xlink:href="assets/images/sprites.svg#gh")
+                    li.footer-container__bottom-line-social-item
+                        a.footer-container__bottom-line-social-item-link(href="#")
+                            svg.footer-icon.sl
+                                use(xlink:href="assets/images/sprites.svg#sl")
+            .footer-container__bottom-line-2
+                .footer-container__bottom-line-tiser Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках<br>обучения в Школе онлайн образования LoftSchool. 
+                .footer-container__bottom-line-copyright © Владимир Астахов | создано с любовью в LoftSchool | 2016
+
+    .humburger
+        a.humburger-link(href="#")
+            .humburger-lines
+    .full-screen-menu
+        include ../common/footer-menu.pug

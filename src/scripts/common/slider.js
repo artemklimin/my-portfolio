@@ -10,45 +10,47 @@ let currentSlide = 0;
 let currentSlide2 = 1;
 let currentSlide3 = 2;
 
-function goToSlide(n){
+function goToSlide(n) {
     slides[currentSlide].className = 'slide';
     slideDescription[currentSlide].className = 'slide-description';
-    currentSlide = (n+slides.length)%slides.length;
+    currentSlide = (n + slides.length) % slides.length;
     slides[currentSlide].className = 'slide showing';
     slideDescription[currentSlide].className = 'slide-description showing';
 }
-function goToSlide2(n){
+
+function goToSlide2(n) {
     slides2[currentSlide2].className = 'slide2';
-    currentSlide2 = (n+slides2.length)%slides2.length;
+    currentSlide2 = (n + slides2.length) % slides2.length;
     slides2[currentSlide2].className = 'slide2 showing';
 }
-function goToSlide3(n){
+
+function goToSlide3(n) {
     slides3[currentSlide3].className = 'slide3';
-    currentSlide3 = (n+slides3.length)%slides3.length;
+    currentSlide3 = (n + slides3.length) % slides3.length;
     slides3[currentSlide3].className = 'slide3 showing';
 }
 
-function setupListners(){
-    next.onclick = function(){
-        goToSlide(currentSlide+1);
-        goToSlide2(currentSlide2+1);
-        goToSlide3(currentSlide3+1);
+function setupListners() {
+    next.onclick = function() {
+        goToSlide(currentSlide + 1);
+        goToSlide2(currentSlide2 + 1);
+        goToSlide3(currentSlide3 + 1);
     }
-    previous.onclick = function(){
-        goToSlide(currentSlide-1);
-        goToSlide2(currentSlide2-1);
-        goToSlide3(currentSlide3-1);
+    previous.onclick = function() {
+        goToSlide(currentSlide - 1);
+        goToSlide2(currentSlide2 - 1);
+        goToSlide3(currentSlide3 - 1);
     }
 }
 
 function showButtons() {
-    for(var i = 0; i<controls.length; i++){
-        controls[i].style.display = 'inline-block'
+    for (var i = 0; i < controls.length; i++) {
+        controls[i].style.display = 'flex'
     }
 }
 
-function sliderInit(){
-    if (slides.length !== 0 && slides2.length !== 0 && slides3.length !== 0 ){
+function sliderInit() {
+    if (slides.length !== 0 && slides2.length !== 0 && slides3.length !== 0) {
         setupListners();
         showButtons();
     }

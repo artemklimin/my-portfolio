@@ -1,0 +1,112 @@
+.hero.hero--blog {
+    height: 396px;
+    background: url(../images/about-bg.jpg) no-repeat center;
+    background-size: cover;
+    &:before {
+        background: transparent;
+        content: "";
+    }
+}
+
+.my-works__title.my-works__title--blog {
+    color: #fff;
+    height: 90px;
+    margin-top: 10px;
+    &:before {
+        background: url(../images/blog.png) center top no-repeat;
+        height: 250%;
+        left: 0;
+        top: -30px;
+    }
+    .my-works__title-lines {
+        &:before {
+            background: rgba(255, 255, 255, .2);
+        }
+        &:after {
+            background: rgba(255, 255, 255, .2);
+        }
+    }
+}
+
+.frame__subName.frame__subName--blog {
+    margin-top: 0;
+    font-family: "RobotoRegular";
+}
+
+.blog-container {
+    display: flex;
+    flex-direction: row;
+    width: 1580px;
+    margin: 0 auto;
+    max-width: 90%;
+    justify-content: space-between;
+    padding: 70px 0 0 0;
+}
+
+.left-menu {
+    width: 18%;
+}
+
+.blog-content {
+    width: 72%;
+}
+
+.blog-content__list-item {
+    &:after {
+        width: 70%;
+        border-bottom: 5px solid #f1f1f2;
+        display: block;
+        content: "";
+        padding-bottom: 70px;
+        margin-bottom: 70px;
+    }
+}
+
+.blog-content__list-item:last-child {
+    &:after {
+        display: none;
+    }
+    padding-bottom: 70px;
+}
+
+.blog-content__list-item-header {
+    font-size: 35px;
+    color: #455a64;
+    font-family: "BERNIERRegular-Regular";
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.blog-content__list-item-date {
+    font-size: 16px;
+    color: #00bfa5;
+    font-family: "RobotoRegular";
+    margin-bottom: 20px;
+}
+
+.blog-content__list-item-text {
+    font-size: 16px;
+    color: #455a64;
+    font-family: "RobotoRegular";
+}
+
+.left-menu__list-item-link {
+    font-family: "RobotoRegular";
+    font-size: 16px;
+    color: #455a64;
+    padding: 10px 15px;
+    border-right: 2px solid transparent;
+    display: block;
+    text-decoration: none;
+    text-align: right;
+}
+
+.left-menu__list-item-link.active-link {
+    border-right: 2px solid #00bfa5;
+    color: #00bfa5;
+}
+
+.treugolnik__left.treugolnik__left--blog,
+.treugolnik__right.treugolnik__right--blog {
+    fill: #ffffff;
+}

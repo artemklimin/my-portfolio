@@ -24,44 +24,50 @@ block content
         .grid-container
             include ../common/slider.pug
 
-
-        
+      
     .footer-container
-        
-
-        .footer-container__contacts
-            .footer-container__contacts-frame
-                .footer-container__contacts-title
-                    .footer-container__contacts-title-lines Контакты
-                ul.footer-container__contacts-list
-                    li.footer-container__contacts-item
-                        .footer-container__contacts-item-link
-                            .footer-container__contacts-item-icon
-                            a.footer-container__contacts-item-link(href="#")
-                                svg.footer-container__contacts-item-icon.vk
-                                    use(xlink:href="assets/images/sprites.svg#skype")
-                                span.footer-container__contacts-item-text yasait.ru
-                    li.footer-container__contacts-item
-                        .footer-container__contacts-item-link
-                            .footer-container__contacts-item-icon
-                            a.footer-container__contacts-item-link(href="#")
-                                svg.footer-container__contacts-item-icon.vk
-                                    use(xlink:href="assets/images/sprites.svg#mail")
-                                span.footer-container__contacts-item-text avklimin@yandex.ru
-                    li.footer-container__contacts-item
-                        .footer-container__contacts-item-link
-                            .footer-container__contacts-item-icon
-                            a.footer-container__contacts-item-link(href="#")
-                                svg.footer-container__contacts-item-icon.vk
-                                    use(xlink:href="assets/images/sprites.svg#phone")
-                                span.footer-container__contacts-item-text +7 921 882 36 17
-                    li.footer-container__contacts-item
-                        .footer-container__contacts-item-link
-                            .footer-container__contacts-item-icon
-                            a.footer-container__contacts-item-link(href="#")
-                                svg.footer-container__contacts-item-icon.vk
-                                    use(xlink:href="assets/images/sprites.svg#map-marker")
-                                span.footer-container__contacts-item-text г. СПб, ул. Прибрежная д. 4
+        .container__title
+            .container__title-lines Что обо мне<br>говорят
+        .reviews
+            ul.reviews__list
+                li.reviews__list-item
+                    ul.review__list
+                        li.review__list-quote
+                            img.review__list-quote-img(src="assets/images/quote.png", alt="")
+                        li.review__list-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                        li.review__list-user
+                            .review__list-user-photo-container
+                                img.review__list-user-photo(src="assets/images/user1.jpg", alt="")
+                            .review__list-user-info
+                                .review__list-user-name Ковальчук Дмитрий
+                                .review__list-user-status основатель Loftschool
+                li.reviews__list-item
+                    ul.review__list
+                        li.review__list-quote
+                            img.review__list-quote-img(src="assets/images/quote.png", alt="")
+                        li.review__list-text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                        li.review__list-user
+                            .review__list-user-photo-container
+                                img.review__list-user-photo(src="assets/images/user2.jpg", alt="")
+                            .review__list-user-info
+                                .review__list-user-name Сабанцев Владимир
+                                .review__list-user-status преподаватель
+        .feedback
+            form(action="")
+                .feedback__frame
+                    .feedback__frame-title
+                        .feedback__frame-title-lines Связаться со мной
+                    .feedback__frame-form
+                        input.feedback__frame-form-name(type="text" placeholder="Имя")
+                        input.feedback__frame-form-email(type="email", name="" placeholder="email")
+                        textarea.feedback__frame-form-message(name="", cols="30", rows="10" placeholder="Сообщение")
+                .feedback__frame-form-buttons
+                    button.submit Отправить
+                    button.reset Сбросить
+        .to-top
+            a.to-top__link(href="#")
+                svg.arrow-scroll-top
+                    use(xlink:href="assets/images/sprites.svg#ar-up")
         .footer-container__bottom-line
             .footer-container__bottom-line-1
                 include ../common/footer-menu.pug
@@ -84,8 +90,6 @@ block content
     .humburger
         a.humburger-link(href="#")
             .humburger-lines
-    //h1 Обо мне
-    //include ../common/technologies.pug
     .full-screen-menu
         include ../common/footer-menu.pug
     
